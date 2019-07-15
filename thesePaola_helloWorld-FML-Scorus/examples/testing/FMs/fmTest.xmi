@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fml:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fml="http://www.xtext.org/example/mydsl/Fml">
+  <features name="SM">
+    <features xsi:type="fml:Mandatory" name="SEnt"/>
+  </features>
+  <features name="SEnt">
+    <features xsi:type="fml:Mandatory" name="sB"/>
+    <features xsi:type="fml:Mandatory" name="sA"/>
+  </features>
+  <features name="sB">
+    <features xsi:type="fml:Mandatory" name="B"/>
+  </features>
+  <features name="sA">
+    <features xsi:type="fml:Mandatory" name="relA"/>
+  </features>
+  <features name="relA">
+    <features xsi:type="fml:Mandatory" name="&quot;R1_sA&quot;"/>
+  </features>
+  <features name="&quot;R1_sA&quot;">
+    <features xsi:type="fml:Mandatory" name="AembB"/>
+  </features>
+</fml:FeatureModel>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="L">
+				<alt mandatory="true" name="E">
+					<feature mandatory="true" name="T"/>
+					<feature mandatory="true" name="N"/>
+				</alt>
+				<or mandatory="true" name="D">
+					<feature mandatory="true" name="C"/>
+					<feature mandatory="true" name="S"/>
+				</or>
+				<feature name="M"/>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>N</var>
+					<not>
+						<var>S</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>M</var>
+					<var>C</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

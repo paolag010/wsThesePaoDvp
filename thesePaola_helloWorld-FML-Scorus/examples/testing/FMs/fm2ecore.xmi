@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fml:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fml="http://www.xtext.org/example/mydsl/Fml">
+  <features name="SM">
+    <features xsi:type="fml:Mandatory" name="SEnt"/>
+    <features xsi:type="fml:Optional" name="SView"/>
+  </features>
+  <features name="SEnt">
+    <features xsi:type="fml:Orgroup">
+      <features>sB</features>
+      <features>sA</features>
+    </features>
+  </features>
+  <features name="sB">
+    <features xsi:type="fml:Xorgroup">
+      <features>B</features>
+      <features>relB</features>
+    </features>
+  </features>
+  <features name="sA">
+    <features xsi:type="fml:Xorgroup">
+      <features>relA</features>
+      <features>A</features>
+    </features>
+  </features>
+  <features name="relB">
+    <features xsi:type="fml:Mandatory" name="&quot;R1_sB&quot;"/>
+  </features>
+  <features name="relA">
+    <features xsi:type="fml:Mandatory" name="&quot;R1_sA&quot;"/>
+  </features>
+  <features name="&quot;R1_sB&quot;">
+    <features xsi:type="fml:Xorgroup">
+      <features>BrefA</features>
+      <features>BembA</features>
+    </features>
+  </features>
+  <features name="&quot;R1_sA&quot;">
+    <features xsi:type="fml:Xorgroup">
+      <features>AembB</features>
+      <features>ArefB</features>
+    </features>
+  </features>
+</fml:FeatureModel>
